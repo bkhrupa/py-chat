@@ -1,0 +1,13 @@
+version: '3'
+
+services:
+  py-chat:
+    container_name: py-chat
+    image: python:3.7.16
+    volumes:
+      - './:/app'
+    devices:
+      - /dev/ttyACM0:/dev/ttyACM0
+    ports:
+      - '8000:8000'
+    restart: always
