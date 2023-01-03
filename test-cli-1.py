@@ -1,5 +1,4 @@
 
-
 def pr_name_and_age(name='Default', age='Unknown'):
     print('Name', name, 'age:', age)
 
@@ -31,6 +30,7 @@ print(math_sum(sum1, 2))
 # ---
 print('- - - - -')
 
+
 check = 'thor'
 
 if check == 'odin':
@@ -39,3 +39,24 @@ elif check == 'thor':
     print('is Thor')
 else:
     print('unknown')
+
+
+# ---
+print('- - - - - loop')
+
+names = ['Thor', 'Loki', 'Odin']
+
+for name in names:
+    print(name)
+
+###
+c = 1
+to_run = True
+
+while to_run:
+    if c == 10:
+        to_run = False
+
+    print('Current', c)
+
+    c += 1
