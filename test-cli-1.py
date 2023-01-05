@@ -1,3 +1,4 @@
+import re
 
 def pr_name_and_age(name='Default', age='Unknown'):
     print('Name', name, 'age:', age)
@@ -60,3 +61,12 @@ while to_run:
     print('Current', c)
 
     c += 1
+
+
+# ---
+print('- - - - - regexp')
+
+string = 'ASD ASD zxc zxc'
+
+print(re.sub('[Az]', '', string))
+
