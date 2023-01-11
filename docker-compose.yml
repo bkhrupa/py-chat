@@ -3,7 +3,9 @@ version: '3'
 services:
   py-chat:
     container_name: py-chat
-    image: python:3.7.16
+    build:
+      context: .
+      dockerfile: Dockerfile
     volumes:
       - './:/app'
     ports:
