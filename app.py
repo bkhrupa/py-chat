@@ -1,11 +1,21 @@
+import os
 from flask import Flask, render_template, url_for
 from flask_sqlalchemy import SQLAlchemy
 from datetime import datetime
 
+basedir = os.path.abspath(os.path.dirname(__file__))
 app = Flask(__name__)
-app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///database/database.sqlite"
+app.config["SQLALCHEMY_DATABASE_URI"] = 'sqlite:///' + os.path.join(basedir, 'database/database.sqlite')
 db = SQLAlchemy(app)
 db.init_app(app)
+
+
+class User(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    nickname = db.Column(db.String(255))
+
+    def __repr__(self):
+        return '<User %r>' % self.id
 
 
 class Message(db.Model):
