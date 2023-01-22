@@ -5,7 +5,7 @@ for study and experiments
 
 ## TODO
 
-* Flask-Alembic
+* Flask-Alembic https://flask-alembic.readthedocs.io/en/stable/
 
 
 ## venv

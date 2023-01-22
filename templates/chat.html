@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+PyChat - Chat
+{% endblock %}
+
+{% block content %}
+<form action="{{ url_for('chat') }}" method="post">
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}"/>
+    <div class="row">
+        <div class="eleven columns">
+            <input type="text" name="message" autofocus class="u-full-width">
+        </div>
+        <div class="one column">
+            <button type="submit" class="button">Send</button>
+        </div>
+    </div>
+</form>
+
+<div>
+    {% for message in messages %}
+    <div class="row">
+        <div class="twelve columns">
+            {{ message.message }}
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
