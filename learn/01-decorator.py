@@ -14,26 +14,25 @@ def say(name):
     print('say hello', name)
 
 
-say = deco(say)
-say('Odin')
+print("deco(say)('Odin')")
+deco(say)('Odin')
 
 
 def sum(a, b):
     return a + b
 
 
+print("sum(1, 2)")
 print(sum(1, 2))
 
 s = deco(sum)
-print(
-    'sum',
-    s(1, 2)
-)
+print("s = deco(sum)")
+print(s(1, 2))
 
 @deco
 def multiply(a, b):
     return a * b
 
 
-print('multiply')
+print('multiply(2, 2)')
 print(multiply(2, 2))
