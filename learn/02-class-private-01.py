@@ -13,4 +13,5 @@ ac1 = Account('Odin', 1000)
 ac1.print_data()
 print(ac1.__dict__)
 print(ac1._Account__name)
+print(ac1.__name)
 
